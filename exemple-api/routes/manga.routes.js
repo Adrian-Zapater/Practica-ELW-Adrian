@@ -4,6 +4,7 @@ const { checkSecretMiddleware } = require('../middlewares/check.secret.middlewar
 const { registerManga } = require('../controllers/register-manga.controller');
 const { getRankingPuntuacio } = require('../controllers/get-puntuacio.controller');
 const { registerPuntuacio } = require('../controllers/register-puntuacio.controller');
+const { registerStatics } = require('../controllers/register-statics.controller');
 
 const router = express.Router();
 
@@ -15,5 +16,7 @@ router.get('/genere/:genere', getMangasByGenere);
 router.get('/ranking/:num', getRankingPuntuacio);
 //router.post('/', registerPuntuacio);
 router.post('/register', registerManga);
+router.post('/registraStatics', registerStatics);
+
 
 module.exports.mangaRouter = router;
