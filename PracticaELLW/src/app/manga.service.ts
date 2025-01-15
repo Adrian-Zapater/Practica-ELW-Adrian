@@ -9,6 +9,8 @@ export class MangaService {
 
   constructor() { }
 
+
+
   async getMangaDataByTitol(mangaTitol: string): Promise<any> {
     try{
         const response = await fetch(`${this.apiUrl}/titol/${mangaTitol}`);
