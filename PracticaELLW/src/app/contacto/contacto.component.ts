@@ -13,16 +13,16 @@ export class ContactoComponent implements OnInit {
   sessionId: String = '';
   userId: String = '';
   llocEvent: String = '';
-  tipusEvent: String = 'visita';
-  createdAt: Date = new Date().getTime();
+  tipusEvent: 'visita' | 'click' = 'visita';
+  createdAt: Date = new Date();
 
   constructor(private staticsService: StaticsService) {}
 
   ngOnInit(): void {
-    this.postStatics(usessionid, userid, llocevent, tipusevent, createdat);
+    this.postStatics(this.sessionId, this.userId, this.llocEvent, this.tipusEvent, this.createdAt);
   }
 
-  async postStatics(usessionid: String, userid: String, llocevent: String, tipusevent: ['visita', 'click'], createdat: Date) {
+  async postStatics(usessionid: String, userid: String, llocevent: String, tipusevent: 'visita' | 'click', createdat: Date) {
 
   }
 

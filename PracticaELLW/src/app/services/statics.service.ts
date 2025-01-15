@@ -17,7 +17,7 @@ export class StaticsService {
   postStatics(usessionid: String,
     userid: String,
     llocevent: String,
-    tipusevent: ['visita', 'click'],
+    tipusevent: 'visita' | 'click',
     createdat: Date){
 
       const statics: Static = { sessionId: usessionid, userId: userid, llocEvent: llocevent, tipusEvent: tipusevent, createdAt: createdat };

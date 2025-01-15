@@ -56,12 +56,12 @@ const StaticsMongooseSchema = new mongoose.Schema({
     },
     tipusEvent: {
         type: String,
-        enum: ['visita', 'click'],
+        enum: 'visita' | 'click',
         required: true
     },
     createdAt: {
         type: Date,
-        default: Date.now
+        default: new Date()
     }
 });
 
