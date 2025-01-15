@@ -1,0 +1,8 @@
+<h1>Clicker Heroes</h1>
+
+<div class="grid-container">
+  <div class="cell" *ngFor="let button of buttons">
+    <button *ngIf="button.visible">{{ button.label }}</button>
+  </div>
+</div>
+
