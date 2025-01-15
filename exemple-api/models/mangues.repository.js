@@ -71,7 +71,7 @@ const StaticsMongooseModel = mongoose.model('Statics', StaticsMongooseSchema);
 
 function createStatics(statics) {
     const staticsMongose = new StaticsMongooseModel(statics);
-    return statics.save();
+    return staticsMongose.save();
 }
 
 function createManga(manga) {
