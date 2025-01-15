@@ -10,7 +10,7 @@ export class StaticsService {
 
   private httpClient = inject(HttpClient);
 
-  private baseUrl = 'http://localhost:3000/';
+  private baseUrl = 'http://localhost:3000/mangues';
 
   constructor() { }
 
@@ -19,8 +19,9 @@ export class StaticsService {
     llocevent: String,
     tipusevent: ['visita', 'click'],
     createdat: Date){
-    const user: Static = { usessionid: usessionid, userid: userid, llocevent: llocevent, tipusevent: tipusevent, createdat: createdat };
 
-    return this.httpClient.post(`${this.baseUrl}users/`, user);
+      const statics: Static = { sessionId: usessionid, userId: userid, llocEvent: llocevent, tipusEvent: tipusevent, createdAt: createdat };
+
+    return this.httpClient.post(`${this.baseUrl}registraStatics/`, statics);
   }
 }
