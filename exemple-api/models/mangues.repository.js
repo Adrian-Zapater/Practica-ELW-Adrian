@@ -41,38 +41,13 @@ const PuntuacioMongooseSchema = new mongoose.Schema({
 });
 
 const StaticsMongooseSchema = new mongoose.Schema({
-    sessionId: {
-        type: String,
-        required: true
-    },
-    userId: {
-        type: String,
-        required: false,
-        default: null 
-        },
-    llocEvent: {
-        type: String,
-        required: true
-    },
-    tipusEvent: {
-        type: String,
-        enum: 'visita' | 'click',
-        required: true
-    },
-    createdAt: {
-        type: Date,
-        default: new Date()
-    }
-});
+    
+})
 
 const MangaMongooseModel = mongoose.model('Manga', MangaMongooseSchema);
 const PuntuacioMongooseModel = mongoose.model('Puntuacio', PuntuacioMongooseSchema);
 const StaticsMongooseModel = mongoose.model('Statics', StaticsMongooseSchema);
 
-function createStatics(statics) {
-    const staticsMongose = new StaticsMongooseModel(statics);
-    return staticsMongose.save();
-}
 
 function createManga(manga) {
     const mangaMongoose = new MangaMongooseModel(manga);
@@ -128,5 +103,3 @@ module.exports.findMangaByTitolExacte = findMangaByTitolExacte;
 module.exports.createPuntuacio = createPuntuacio;
 module.exports.findRankingPuntuacio = findRankingPuntuacio;
 module.exports.findPuntuacioByUsername = findPuntuacioByUsername;
-
-module.exports.createStatics = createStatics;

@@ -1,11 +1,11 @@
-const {createStatics} = require('../models/mangues.repository');
+const {createStatisticsValue} = require('../models/mangues.repository');
 
-async function registerStatics(req, res) {
+async function registerStatisticsValue(req, res) {
   console.log(req.body);
   console.log(req.headers);
  
-  const newStatics = await createStatics(req.body);
-  res.json(newStatics);
+  const newStatisticsValue = await createStatisticsValue(req.body);
+  res.json(newStatisticsValue);
 }
 
-module.exports.registerStatics = registerStatics;
+module.exports.registerStatisticsValue = registerStatisticsValue;

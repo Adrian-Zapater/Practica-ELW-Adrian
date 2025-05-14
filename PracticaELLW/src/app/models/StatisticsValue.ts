@@ -1,4 +1,4 @@
-export interface Static {
+export interface StatisticsValue {
   sessionId: String;
   userId: String;
   llocEvent: String;
