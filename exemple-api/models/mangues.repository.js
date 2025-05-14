@@ -33,20 +33,7 @@ const MangaMongooseSchema = new mongoose.Schema({
     });
 
 
-const PuntuacioMongooseSchema = new mongoose.Schema({
-    username: String,
-    puntuacioTotal: Number,
-    puntuacioMitjaPerSegon: Number,
-    tempsJugat: Number,
-});
-
-const StaticsMongooseSchema = new mongoose.Schema({
-    
-})
-
 const MangaMongooseModel = mongoose.model('Manga', MangaMongooseSchema);
-const PuntuacioMongooseModel = mongoose.model('Puntuacio', PuntuacioMongooseSchema);
-const StaticsMongooseModel = mongoose.model('Statics', StaticsMongooseSchema);
 
 
 function createManga(manga) {
@@ -79,19 +66,6 @@ function findMangaByGenere(genere) {
     return MangaMongooseModel.find({genere: {$in: genere} });
 }
 
-function createPuntuacio(puntuacio) {
-    const puntuacioMongoose = new PuntuacioMongooseModel(puntuacio);
-    return puntuacioMongoose.save();
-}
-
-function findRankingPuntuacio(num) {
-    return PuntuacioMongooseModel.find().sort({puntuacioMitjaPerSegon : -1}).limit(num);
-}
-
-function findPuntuacioByUsername(username) {
-    return PuntuacioMongooseModel.find({username: username});
-}
-
 module.exports.createManga = createManga;
 module.exports.findMangaById = findMangaById;
 module.exports.findAllMangas = findAllMangas;
@@ -99,7 +73,3 @@ module.exports.findMangaByTitol = findMangaByTitol;
 module.exports.findMangaByAutor = findMangaByAutor;
 module.exports.findMangaByGenere = findMangaByGenere;
 module.exports.findMangaByTitolExacte = findMangaByTitolExacte;
-
-module.exports.createPuntuacio = createPuntuacio;
-module.exports.findRankingPuntuacio = findRankingPuntuacio;
-module.exports.findPuntuacioByUsername = findPuntuacioByUsername;

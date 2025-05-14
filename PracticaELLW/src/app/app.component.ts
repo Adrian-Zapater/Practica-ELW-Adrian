@@ -9,14 +9,13 @@ import { ListaUltimosMangasComponent } from './lista-ultimos-mangas/lista-ultimo
 import { ListaMangasComponent } from './lista-mangas/lista-mangas.component';
 import { TextoNovedadesComponent } from './texto-novedades/texto-novedades.component';
 import { ContactoComponent } from './contacto/contacto.component';
-import { ClickerHerosComponent } from './clicker-heros/clicker-heros.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, CapsaleraComponent, TopfiveComponent, NovedadesComponent,
     TextoNovedadesComponent, UltimosMangasComponent, ListaUltimosMangasComponent, ListaMangasComponent,
-    ContactoComponent, ClickerHerosComponent],
+    ContactoComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
