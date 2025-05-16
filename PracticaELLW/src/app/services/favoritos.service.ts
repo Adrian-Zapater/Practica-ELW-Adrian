@@ -30,4 +30,7 @@ export class FavoritosService {
       this.favoritos.set(favs);
     });
   }
+  getFavoritos() {
+    return this.httpClient.get<any>(`${this.baseUrl}/`);
+  }
 }

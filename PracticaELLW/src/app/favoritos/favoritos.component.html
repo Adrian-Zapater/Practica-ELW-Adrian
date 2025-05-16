@@ -1,10 +1,14 @@
 <div class="mangas-caja">
   <div class="mangas">
-    <div class="manga" *ngFor="let manga of mangasFavoritos">
-      <a [href]="'http://localhost:4200/'+ manga.titol">
-        <img [src]="'./assets/img/' + manga.foto" alt="Logo">
-        <div class="texto">{{ manga.titol }}</div>
-      </a>
-    </div>
+    @for (manga of favoritos(); track manga.titol) {
+      <div class="manga">
+        <a [routerLink]="['/', manga.titol]">
+          <app-favorito
+            [titol]="manga.titol"
+            [foto]="manga.foto"
+          ></app-favorito>
+        </a>
+      </div>
+    }
   </div>
 </div>

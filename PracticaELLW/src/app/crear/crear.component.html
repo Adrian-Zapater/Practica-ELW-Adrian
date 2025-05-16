@@ -1,0 +1,21 @@
+<div class="crear-container">
+  <h2>Crear Personaje</h2>
+  <form [formGroup]="crearForm" (ngSubmit)="onSubmit()" autocomplete="off">
+
+    <label for="nom">Nombre:</label>
+    <input id="nom" formControlName="nom" placeholder="(mínimo 2 caracteres)" required />
+
+    <label for="autor">Autor:</label>
+    <input id="autor" formControlName="autor" placeholder="(mínimo 2 caracteres)" required />
+
+
+    <label for="foto">URL Imagen:</label>
+    <input id="foto" formControlName="foto" placeholder="URL" required />
+
+
+    <label for="comics">IDs de Comics (separados por comas):</label>
+    <input id="comics" formControlName="comics" placeholder="id1,id2,id3" />
+
+    <button type="submit" [disabled]="!crearForm.valid">Aceptar</button>
+  </form>
+</div>

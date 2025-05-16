@@ -9,8 +9,5 @@ import { Component, input } from '@angular/core';
 })
 export class FavoritoComponent {
   titol = input.required<string>();
-  autor = input.required<string>();
-  caps = input.required<number>();
   foto = input.required<string>();
-  sinopsis = input.required<string>();
 }

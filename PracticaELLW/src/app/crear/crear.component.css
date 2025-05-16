@@ -1,0 +1,45 @@
+.crear-container {
+  background: #181818;
+  border: 2px solid rgb(255, 104, 49);
+  border-radius: 16px;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 32px;
+  color: coral;
+}
+
+.crear-container h2 {
+  color: coral;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.crear-container label {
+  display: block;
+  margin-top: 16px;
+  color: coral;
+  font-weight: bold;
+}
+
+.crear-container input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background: #222;
+  color: coral;
+  margin-bottom: 8px;
+}
+
+.crear-container button[type="submit"] {
+  margin-top: 24px;
+  width: 100%;
+  background: coral;
+  color: #181818;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
