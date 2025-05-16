@@ -25,3 +25,4 @@ export class AllMangasComponent implements OnInit {
     this.ultimosMangas = await this.mangaService.getMangues(this.cantidadMangas);
   }
 }
+
