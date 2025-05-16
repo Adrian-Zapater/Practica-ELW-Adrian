@@ -6,6 +6,7 @@ import { MangaBusquedaComponent } from './manga-busqueda/manga-busqueda.componen
 import { ContactoComponent } from './contacto/contacto.component';
 import { FavoritosComponent } from './favoritos/favoritos.component';
 import { CrearComponent } from './crear/crear.component';
+import { PersonajesComponent } from './personajes/personajes.component';
 
 
 export const routes: Routes = [
@@ -16,4 +17,5 @@ export const routes: Routes = [
   {path: 'contacto/Otabook', component: ContactoComponent},
   {path: 'listar/Favoritos', component: FavoritosComponent},
   {path: 'personaje/crear', component: CrearComponent},
+  {path: 'personaje/listar', component: PersonajesComponent},
 ];
